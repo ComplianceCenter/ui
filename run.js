@@ -85,16 +85,16 @@ tasks.set('build', () => {
 //
 // Build and publish the website
 // -----------------------------------------------------------------------------
-tasks.set('publish', () => {
-  const firebase = require('firebase-tools');
-  return run('build')
-    .then(() => firebase.login({ nonInteractive: false }))
-    .then(() => firebase.deploy({
-      project: config.project,
-      cwd: __dirname,
-    }))
-    .then(() => { setTimeout(() => process.exit()); });
-});
+//tasks.set('publish', () => {
+//  const firebase = require('firebase-tools');
+//  return run('build')
+//    .then(() => firebase.login({ nonInteractive: false }))
+//    .then(() => firebase.deploy({
+//      project: config.project,
+//      cwd: __dirname,
+//    }))
+//    .then(() => { setTimeout(() => process.exit()); });
+//});
 
 //
 // Build website and launch it in a browser for testing (default)
